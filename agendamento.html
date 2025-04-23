@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - PetShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lado-esquerdo">
+            <h1 class="titulo-boas-vindas" id="tituloFormulario">Agendar Serviço</h1>
+
+            <form id="formAgendamento">
+                <input type="hidden" id="idAgendamento">
+
+                <div class="grupo-input">
+                    <label for="nomePet">Nome do Pet *</label>
+                    <div class="campo-input">
+                        <input type="text" id="nomePet" placeholder="Digite o nome do seu pet" required>
+                    </div>
+                    <span class="mensagem-erro" id="erroNomePet"></span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="racaPet">Raça *</label>
+                    <div class="campo-input">
+                        <input type="text" id="racaPet" placeholder="Digite a raça do pet" required>
+                    </div>
+                    <span class="mensagem-erro" id="erroRaca"></span>
+                </div>
+
+                <div class="linha-inputs">
+                    <div class="grupo-input metade-largura">
+                        <label for="dataAgendamento">Data *</label>
+                        <div class="campo-input">
+                            <input type="date" id="dataAgendamento" required>
+                        </div>
+                        <span class="mensagem-erro" id="erroData"></span>
+                    </div>
+
+                    <div class="grupo-input metade-largura">
+                        <label for="horaAgendamento">Hora *</label>
+                        <div class="campo-input">
+                            <input type="time" id="horaAgendamento" required>
+                        </div>
+                        <span class="mensagem-erro" id="erroHora"></span>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="observacoes">Observações</label>
+                    <div class="campo-input">
+                        <textarea id="observacoes" rows="3" placeholder="Alguma informação adicional importante"></textarea>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="fotoPet">Foto do Pet *</label>
+                    <div class="campo-input envio-arquivo">
+                        <input type="file" id="fotoPet" accept="image/*" required>
+                        <label for="fotoPet" class="rotulo-envio-arquivo">
+                            <span id="nomeArquivo">Selecione uma imagem</span>
+                            <span class="botao-envio-arquivo">Escolher arquivo</span>
+                        </label>
+                    </div>
+                    <span class="mensagem-erro" id="erroFoto"></span>
+                    <div id="previewImagem" class="preview-imagem"></div>
+                </div>
+
+                <div class="botoes-formulario">
+                    <button type="submit" class="botao-principal">
+                        <span class="texto-botao" id="textoBotaoEnviar">Agendar</span>
+                    </button>
+                    <button type="button" id="botaoExcluirAgendamento" class="botao-excluir oculto">
+                        <i class="fas fa-trash-alt"></i> Excluir
+                    </button>
+                </div>
+            </form>
+
+            <p class="texto-registro"><a href="meus-agendamentos.html" id="linkVoltar">Voltar para Meus Agendamentos</a></p>
+        </div>
+
+        <div class="lado-direito">
+            <div class="imagem-fundo"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

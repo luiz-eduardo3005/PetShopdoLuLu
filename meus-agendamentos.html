@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Agendamentos - PetShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="meus-agendamentos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="mensagemFeedback" class="mensagem-feedback"></div>
+
+        <div class="cabecalho">
+            <div>
+                <h1><i class="fas fa-calendar-alt"></i> Meus Agendamentos</h1>
+                <p class="usuario-boas-vindas">Bem-vindo, <span id="nomeUsuario"></span></p>
+            </div>
+            <div class="acoes-cabecalho">
+                <a href="agendamento.html" class="botao-novo-agendamento">
+                    <i class="fas fa-plus"></i> Novo Agendamento
+                </a>
+                <button id="botaoLogout" class="botao-sair">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </div>
+        </div>
+
+        <div class="filtros">
+            <div class="grupo-filtro">
+                <label for="filtro-data">Filtrar por data:</label>
+                <input type="date" id="filtro-data">
+            </div>
+        </div>
+
+        <div id="lista-agendamentos" class="lista-agendamentos">
+            <div class="estado-vazio">
+                <i class="fas fa-calendar-times"></i>
+                <p>Nenhum agendamento encontrado</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalConfirmacao" class="modal">
+        <div class="conteudo-modal">
+            <span class="fechar-modal">&times;</span>
+            <h3 id="tituloModal">Confirmar Exclusão</h3>
+            <p id="mensagemModal">Tem certeza que deseja excluir este agendamento?</p>
+            <div class="botoes-modal">
+                <button id="acaoConfirmar" class="botao-confirmar">Confirmar</button>
+                <button id="acaoCancelar" class="botao-cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

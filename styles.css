@@ -1,0 +1,194 @@
+:root {
+    --cor-primaria: #7c3aed;
+    --cor-primaria-escura: #6d28d9;
+    --cor-secundaria: #2c3e50;
+    --cor-fundo: #f5f5f5;
+    --cor-borda: #ddd;
+    --cor-texto: #333;
+    --cor-secundaria-clara: #7f8c8d;
+    --cor-erro: #e74c3c;
+    --cor-sucesso: #2ecc71;
+    --cor-fundo-claro: #ffffff;
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+
+.container {
+    display: block;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.lado-esquerdo {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lado-direito {
+    flex: 1;
+    display: none;
+}
+
+.imagem-fundo {
+    height: 100%;
+    background-image: url('pets.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.titulo-boas-vindas {
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.grupo-input {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--cor-secundaria);
+}
+
+.campo-input {
+    position: relative;
+}
+
+.campo-input input,
+.campo-input select,
+.campo-input textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.campo-input input:focus,
+.campo-input select:focus,
+.campo-input textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+.campo-input.erro input,
+.campo-input.erro select,
+.campo-input.erro textarea {
+    border-color: var(--cor-erro);
+}
+
+.campo-input.erro input:focus,
+.campo-input.erro select:focus,
+.campo-input.erro textarea:focus {
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.mensagem-erro {
+    color: var(--cor-erro);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.botao-principal {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.botao-principal:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+.botao-principal:disabled {
+    background-color: var(--cor-borda);
+    cursor: not-allowed;
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.linha {
+    flex: 1;
+    height: 1px;
+    background-color: var(--cor-borda);
+}
+
+
+
+/* Centralização apenas para login/cadastro */
+.pagina-centralizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+
+.pagina-centralizada .container {
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lado-direito {
+    display: none !important;
+}
