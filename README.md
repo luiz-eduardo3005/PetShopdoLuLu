@@ -6,10 +6,9 @@ Este projeto é um sistema web completo para agendamento de serviços em um pets
 
 - Node.js + Express
 - MySQL
-- JWT (autenticação)
-- Bcrypt (criptografia)
-- Multer (upload de imagem)
-- HTML + CSS (frontend separado)
+- JWT
+-  Bcrypt - Multer 
+- HTML + CSS 
 
 ## 📁 Estrutura
 
